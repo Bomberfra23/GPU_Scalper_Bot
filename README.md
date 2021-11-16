@@ -19,3 +19,5 @@ In order to work, this bot must collaborate with Chrome WebDriver that is an ope
 2. Place it in a directory (example, C:\Program Files (x86)\chromedriver.exe)
 3. Enter the path in the <b>script_settings</b> file in <b>Chromedriver_path</b>
 ## Telegram Alert Configuration
+<img src="Source/telegram.png">
+This Bot h
