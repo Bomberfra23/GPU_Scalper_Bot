@@ -11,3 +11,6 @@ Please Join [Support & FAQ Telegram Group](https://t.me/HwGroupTech) if you have
 GPU SCalper Bot Alpha, is an automatic add to cart, remote alert and check product availability completely free Bot. It can scrape various gpu and informatic stores, check if a product is available or not, add to cart it automatically and send you a status notification via Telegram Bot. It works on Chrome and on every device that has Python installed so Windows 7/8/10/11, MacOS, Linux Distro.
 
 ## Chrome Browser Configuration
+In order to work, this bot must collaborate with Chrome WebDriver that is an open source tool for automated testing of webapps across Google Chrome Browser.
+#### Download Chrome Webdriver
+So, we need to download it at this [link](https://chromedriver.chromium.org/downloads)
