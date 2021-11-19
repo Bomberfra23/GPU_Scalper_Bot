@@ -27,10 +27,40 @@ Now we are ready to start the script, let's see how to do it
 3. (optional) an IDE like PyCharm for modify Py files
 #### Bot Files
 <img src="Source/main_files.png">
-This Pyhton Software is composed by 5 files:
+This Pyhton Software is composed by 6 files:
 
 1. <b>main.Py</b> which is the main file to run to get evrything started
 2. <b>GUI.Py</b> which is the file responsible for the graphical interface
 3. <b>script_functions.Py</b> which is the "engine" file of the software
 4. <b>script_settings.Py</b> which is the file that we have to modify for change settings like alert filters ecc
-5. <b>Windows_Installer.Bat</b> which is a BAT file that install automatically all the requirements of the bot if you run it on Windows
+5. <b>requirements.txt</b> which is a TXT file that tells automatically to Python PIP what packages install (Windows, Linux, MacOS)
+6. <b>Windows_Installer.Bat</b> which is a BAT file that install automatically all the requirements of the bot if you run it (only Windows)
+
+#### install packages
+Windows, Linux, MacOS
+1. after installing Python PIP on your machine, open Terminal or CMD
+2. with the cd command, enter on the GPU Scalper Bot folder
+3. write the command as below to install all the packages
+<img src="Source/bot_requirements.png">
+
+Only Windows
+
+1. simply open the GPU Scalper Bot folder and double click on the BAT file
+
+#### run main file and the home
+
+<img src="Source/first_run.png">
+
+1. run the <b>main.Py</b> file as shown to start the software 
+
+<img src="Source/bot_home.png">
+
+This is the main home of the bot where you can choose which shop to point to, visit our Telegram Group or Exit!
+
+#### change settings
+
+<img src="Source/settings_guide.png">
+
+When your first open the <b>script_settings.Py</b> file, you find this four entries
+<b>Chromedriver_path</b>
+
