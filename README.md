@@ -62,5 +62,9 @@ This is the main home of the bot where you can choose which shop to point to, vi
 <img src="Source/settings_guide.png">
 
 When your first open the <b>script_settings.Py</b> file, you find this four entries
-<b>Chromedriver_path</b>
+
+1) <b>Chromedriver_path</b> where you have to insert the location of the <b>chromedriver.exe</b> file
+2) <b>telegram_bot_token</b> where you have to insert you telegram bot Token after have create it with [BotFather](https://t.me/botfather)
+3) <b>telegram_chat_id</b> where you have to insert your personal Telegram chat id that you can take from [here](https://t.me/chatIDrobot)
+4) <b>telegram_alert_status</b> that enable or disable the Telegram Alert Notifications entering True or False
 
