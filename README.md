@@ -68,3 +68,20 @@ When your first open the <b>script_settings.Py</b> file, you find this four entr
 3) <b>telegram_chat_id</b> where you have to insert your personal Telegram chat id that you can take from [here](https://t.me/chatIDrobot)
 4) <b>telegram_alert_status</b> that enable or disable the Telegram Alert Notifications entering True or False
 
+#### start buy anything!
+
+After selecting one of the three stores available on this version you have to insert an handful of temporal values to start making the bot work, let's see.
+
+###### link
+
+The bot has to known of what product you are interested in, you can simply tell to it by inserting the product link by pasting it.
+
+
+<img src="Source/insert_link.png">
+
+<img src="Source/LDLC_link_instruction.png">
+<img src="Source/mediaworld_link_instruction.png">
+<img src="Source/unieuro_link_instruction.png">
+
+###### requests delay
+
