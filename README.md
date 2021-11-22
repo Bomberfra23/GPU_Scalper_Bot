@@ -68,11 +68,11 @@ When your first open the <b>script_settings.Py</b> file, you find this four entr
 3) <b>telegram_chat_id</b> where you have to insert your personal Telegram chat id that you can take from [here](https://t.me/chatIDrobot)
 4) <b>telegram_alert_status</b> that enable or disable the Telegram Alert Notifications entering True or False
 
-#### start buy anything!
+## start buy anything!
 
 After selecting one of the three stores available on this version you have to insert an handful of temporal values to start making the bot work, let's see.
 
-###### link
+### link
 
 The bot has to known of what product you are interested in, you can simply tell to it by inserting the product link by pasting it.
 
@@ -83,5 +83,40 @@ The bot has to known of what product you are interested in, you can simply tell 
 <img src="Source/mediaworld_link_instruction.png">
 <img src="Source/unieuro_link_instruction.png">
 
-###### requests delay
+### requests delay
 
+After have correctly inserted the product link, the bot has to known how many time has to past beetween requests to the website page
+
+<img src="Source/request_delay.png">
+
+You must insert an integral number value greater than 0 or equal to 0
+
+### threads
+
+This Bot has also a multi-threading requests implementation that provides a really huge boost to all the process.
+
+<img src="Source/thread.png">
+
+You can simply tell to the bot how many threads do you want to run inserting a integral number value greater than 1 or equal to 1 (DO NOT EXCEED 16 THREADS OR YOUR COMPUTER MAY CRASHS!)
+
+### Availability check
+
+after have started the bot, it will constantly check if the desidered product is available so you will see a screen similar to this one:
+<img src="Source/bot_check.png">
+
+### Telegram Alert
+
+If you have configured all properly, when the Bot successfully add to cart the desidered product you will receive a message from your Telegram Bot like this:
+
+
+<img src="Source/telegram_succ.jpg">
+
+However, if the bot has a problem adding to the cart like no responding site ecc... you will see a message like this:
+
+
+<img src="Source/telegram_failed.jpg">
+
+## END
+
+Thanks for have entirely read this guide, now you are ready to buy all of the GPUs you need!
+Stay updated for the coming release and leave a STAR
