@@ -94,7 +94,8 @@ def check_availability_ldlc(link, requests_delay, telegram_bot_token, telegram_c
                     content.find('div', {"class": "modal-stock-web pointer stock stock-7"}) or \
                     content.find('div', {"class": "modal-stock-web pointer stock stock-8"}) or \
                     content.find('div', {"class": "modal-stock-web pointer stock stock-9"}) or \
-                    content.find('div', {"class": "modal-stock-web pointer stock stock-10"})
+                    content.find('div', {"class": "modal-stock-web pointer stock stock-10"}) or \
+                    content.find('div', {"class": "main p404 p404-es"})
         if check_div == content.find('div', {"class": "modal-stock-web pointer stock stock-2"}):
             print(str([time.ctime()]) + obj_title + "  Status: Object Available, add to cart in pending...")
             try:
@@ -146,6 +147,8 @@ def check_availability_ldlc(link, requests_delay, telegram_bot_token, telegram_c
                     telegram_text = "❌ " + str(obj_title) + " \n\n🛒Unable to add to cart🛒\n\n🔗Link: " + str(link)
                     telegram_alert(telegram_bot_token, telegram_chat_id, telegram_text)
             break
+        if check_div == content.find('div', {"class": "main p404 p404-es"}):
+            print(str([time.ctime()]) + obj_title + "  Status: Object Out of stock")
 
 def check_availability_mediaworld(link, requests_delay, telegram_bot_token, telegram_chat_id, telegram_alert_status):
     while link == link:
