@@ -51,7 +51,7 @@ def automaticaddtocartldlc(link):
     Chromedriver.get(link)
     wait = WebDriverWait(Chromedriver, 20)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@id='product-page-price']/div[2]/button"))).click()
-    wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]/div[1]/div[2]/a[2]"))).click()
+    wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@id='modal-mise-panier']/div/div/div/div/div[2]/div[3]/a"))).click()
 
 def automaticaddtocartmediaworld(link):
     PATH = Service(Chromedriver_path)
@@ -62,8 +62,6 @@ def automaticaddtocartmediaworld(link):
     wait = WebDriverWait(Chromedriver, 20)
     wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@id='onetrust-accept-btn-handler']"))).click()
     wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@id='block-mw-theme-content']/div/div/div/div/div[4]/div/div[4]/div/div/div[4]/a/span"))).click()
-    wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[17]/div[2]/div/a")))
-    Chromedriver.get("https://www.mediaworld.it/checkout")
 
 
 def automaticaddtocartunieuro(link):
@@ -96,7 +94,31 @@ def check_availability_ldlc(link, requests_delay, telegram_bot_token, telegram_c
                     content.find('div', {"class": "modal-stock-web pointer stock stock-9"}) or \
                     content.find('div', {"class": "modal-stock-web pointer stock stock-10"}) or \
                     content.find('div', {"class": "main p404 p404-es"})
+        if check_div == content.find('div', {"class": "modal-stock-web pointer stock stock-1"}):
+            print(str([time.ctime()]) + obj_title + "  Status: Object Available, add to cart in pending...")
+            try:
+                automaticaddtocartldlc(link)
+                if telegram_alert_status == True:
+                    telegram_text = "✅ " + str(obj_title) + " \n\n🛒Successfully added to cart🛒\n\n🔗Link: " + str(link)
+                    telegram_alert(telegram_bot_token, telegram_chat_id, telegram_text)
+            except:
+                if telegram_alert_status == True:
+                    telegram_text = "❌ " + str(obj_title) + " \n\n🛒Unable to add to cart🛒\n\n🔗Link: " + str(link)
+                    telegram_alert(telegram_bot_token, telegram_chat_id, telegram_text)
+            break
         if check_div == content.find('div', {"class": "modal-stock-web pointer stock stock-2"}):
+            print(str([time.ctime()]) + obj_title + "  Status: Object Available, add to cart in pending...")
+            try:
+                automaticaddtocartldlc(link)
+                if telegram_alert_status == True:
+                    telegram_text = "✅ " + str(obj_title) + " \n\n🛒Successfully added to cart🛒\n\n🔗Link: " + str(link)
+                    telegram_alert(telegram_bot_token, telegram_chat_id, telegram_text)
+            except:
+                if telegram_alert_status == True:
+                    telegram_text = "❌ " + str(obj_title) + " \n\n🛒Unable to add to cart🛒\n\n🔗Link: " + str(link)
+                    telegram_alert(telegram_bot_token, telegram_chat_id, telegram_text)
+            break
+        if check_div == content.find('div', {"class": "modal-stock-web pointer stock stock-3"}):
             print(str([time.ctime()]) + obj_title + "  Status: Object Available, add to cart in pending...")
             try:
                 automaticaddtocartldlc(link)
